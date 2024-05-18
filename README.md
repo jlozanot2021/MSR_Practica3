@@ -48,10 +48,16 @@ En este caso se puede apreciar como en el momento que mayor variacion hay entre 
 
 # Videos
 
+#### Floor
 
-[Screencast from 05-18-2024 05:46:34 PM.webm](https://github.com/jlozanot2021/MSR_Practica3/assets/102520615/64a1f06f-efce-4508-992e-bf419b54fa99)
-
-
-[Screencast from 05-18-2024 05:56:22 PM.webm](https://github.com/jlozanot2021/MSR_Practica3/assets/102520615/dd904e42-7af8-411d-b919-f0e885038a31)
+[Screencast from 05-18-2024 05:56:22 PM.webm](https://github.com/jlozanot2021/MSR_Practica3/assets/102520615/38832766-0552-4f3a-a6a2-ba0e65ad326c)
 
 
+#### Sand
+
+[Screencast from 05-18-2024 05:46:34 PM.webm](https://github.com/jlozanot2021/MSR_Practica3/assets/102520615/9689890e-966b-4a2f-9c7c-50c76e923e85)
+
+
+#### Conclusión videos
+
+En los videos se puede apreciar como el contacto con las cajas en Sand hace que el vehículo se frene, mientras que en el caso de Floor esto no ocurre.
