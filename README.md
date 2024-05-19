@@ -61,3 +61,16 @@ En este caso se puede apreciar como en el momento que mayor variacion hay entre 
 #### Conclusión videos
 
 En los videos se puede apreciar como el contacto con las cajas en Sand hace que el vehículo se frene, mientras que en el caso de Floor esto no ocurre.
+
+
+### TF
+#### Parte A
+
+[frames_2024-05-19_19.44.01.pdf](https://github.com/jlozanot2021/MSR_Practica3/files/15370378/frames_2024-05-19_19.44.01.pdf)
+
+Video
+
+
+#### Parte B
+
+[frames_2024-05-19_16.59.37.pdf](https://github.com/jlozanot2021/MSR_Practica3/files/15370384/frames_2024-05-19_16.59.37.pdf)
