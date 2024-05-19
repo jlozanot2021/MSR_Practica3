@@ -1,0 +1,1053 @@
+<?xml version="1.0"?>
+<!-- created with Phobos 1.0.1 "Capricious Choutengan" -->
+<robot name="robot" xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <link name="box_botton">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="100.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cube.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="2.0 1.5 0.5"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cube.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="2.0 1.5 0.5"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="base_link">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="150.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cube">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="3.0 2.0 0.5"/>
+        </geometry>
+        <material name="Material"/>
+      </visual>
+      <collision name="Cube">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="3.0 2.0 0.5"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="base_footprint">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+    </link>
+
+
+    <link name="c2_felt_front_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="left_front_back2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="left_front_back2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c2_left_back_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="left_back_back2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="left_back_back2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c2_left_back_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="left_back_front2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="left_back_front2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c2_left_front_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="left_front_front2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="left_front_front2">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c2_right_back_back">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="right_back_back2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="right_back_back2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c2_right_back_front">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="right_back_front2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="right_back_front2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c2_right_front_back">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="right_front_back2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="right_front_back2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c2_right_front_front">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="right_front_front2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.3"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="right_front_front2">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.3"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_left_back_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder.002">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.94"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder.002">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.94"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_left_back_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder.005">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.55"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder.005">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.55"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_left_front_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder.004">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.55"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder.004">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.55"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_left_front_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.94"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.94"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_right_back_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.94"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder.001">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.94"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_right_back_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder.006">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.55"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder.006">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.55"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_right_front_back">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder.007">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.55"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder.007">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.55"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="c_right_front_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="Cylinder.003">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <cylinder radius="0.05" length="0.94"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="Cylinder.003">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.94"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wall_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wall_back">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.25 0"/>
+        </geometry>
+        <material name="phobos_controller"/>
+      </visual>
+      <collision name="wall_back">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.25 0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wall_left_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wall_left">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.5 0"/>
+        </geometry>
+        <material name="phobos_controller"/>
+      </visual>
+      <collision name="wall_left">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.5 0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wall_ramp_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wall_ramp">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.505 1.25 0"/>
+        </geometry>
+      </visual>
+      <collision name="wall_ramp">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.505 1.25 0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wall_right_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wall_right">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.5 0"/>
+        </geometry>
+        <material name="phobos_controller"/>
+      </visual>
+      <collision name="wall_right">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.5 0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wall_top_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.1"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wall_top">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.25 0"/>
+        </geometry>
+        <material name="phobos_controller"/>
+      </visual>
+      <collision name="wall_top">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="1.5 1.25 0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_left_back_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_left_back_back">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.003.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_left_back_back.000">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.011.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_left_back_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_left_back_front">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.007.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_left_back_front.000">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.010.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_left_front_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_left_front_back">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.005.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_left_front_back.000">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.009.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_left_front_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_left_front_front">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_left_front_front.000">
+        <origin xyz="0 0 0" rpy="-3.14159 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.008.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_right_back_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_right_back_back">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.002.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_right_back_back.000">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.012.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_right_back_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_right_back_front">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.006.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_right_back_front.000">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.013.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_right_front_back_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_right_front_back">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.004.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_right_front_back.000">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.014.dae" scale="1.0 1.0 1.0"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="wheel_right_front_front_">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="10.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <visual name="wheel_right_front_front">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.001.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+        <material name="Material.001"/>
+      </visual>
+      <collision name="wheel_right_front_front.000">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="file://$(find practica3)/meshes/dae/Torus.015.dae" scale="0.27 0.27 0.6"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="base_link_" type="fixed">
+      <origin xyz="0 0 1.235" rpy="0 0 0"/>
+      <parent link="base_footprint"/>
+      <child link="base_link"/>
+    </joint>
+
+    <joint name="box_botton" type="fixed">
+      <origin xyz="0 0 -0.25" rpy="0 0 0"/>
+      <parent link="base_link"/>
+      <child link="box_botton"/>
+    </joint>
+
+    <joint name="c2_felt_front_back_" type="fixed">
+      <origin xyz="0.58 0.8 -0.9" rpy="1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_felt_front_back_"/>
+    </joint>
+
+    <joint name="c2_left_back_back_" type="fixed">
+      <origin xyz="-1.62 0.8 -0.9" rpy="1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_left_back_back_"/>
+    </joint>
+
+    <joint name="c2_left_back_front_" type="fixed">
+      <origin xyz="-0.58 0.8 -0.9" rpy="1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_left_back_front_"/>
+    </joint>
+
+    <joint name="c2_left_front_front_" type="fixed">
+      <origin xyz="1.62 0.8 -0.9" rpy="1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_left_front_front_"/>
+    </joint>
+
+    <joint name="c2_right_back_back" type="fixed">
+      <origin xyz="-1.62 -0.8 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_right_back_back"/>
+    </joint>
+
+    <joint name="c2_right_back_front" type="fixed">
+      <origin xyz="-0.58 -0.8 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_right_back_front"/>
+    </joint>
+
+    <joint name="c2_right_front_back" type="fixed">
+      <origin xyz="0.58 -0.8 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_right_front_back"/>
+    </joint>
+
+    <joint name="c2_right_front_front" type="fixed">
+      <origin xyz="1.62 -0.8 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="c2_right_front_front"/>
+    </joint>
+
+    <joint name="c_left_back_back_" type="fixed">
+      <origin xyz="-1.25 0.57 -0.7" rpy="0.2618 1.0472 0"/>
+      <parent link="base_link"/>
+      <child link="c_left_back_back_"/>
+    </joint>
+
+    <joint name="c_left_back_front_" type="fixed">
+      <origin xyz="-0.5 0.57 -0.7" rpy="0.5236 0.34907 0"/>
+      <parent link="base_link"/>
+      <child link="c_left_back_front_"/>
+    </joint>
+
+    <joint name="c_left_front_back_" type="fixed">
+      <origin xyz="0.5 0.57 -0.7" rpy="0.5236 -0.34907 0"/>
+      <parent link="base_link"/>
+      <child link="c_left_front_back_"/>
+    </joint>
+
+    <joint name="c_left_front_front_" type="fixed">
+      <origin xyz="1.25 0.57 -0.7" rpy="0.2618 -1.0472 0"/>
+      <parent link="base_link"/>
+      <child link="c_left_front_front_"/>
+    </joint>
+
+    <joint name="c_right_back_back_" type="fixed">
+      <origin xyz="-1.25 -0.57 -0.7" rpy="-0.2618 1.0472 0"/>
+      <parent link="base_link"/>
+      <child link="c_right_back_back_"/>
+    </joint>
+
+    <joint name="c_right_back_front_" type="fixed">
+      <origin xyz="-0.5 -0.57 -0.7" rpy="-0.5236 0.34907 0"/>
+      <parent link="base_link"/>
+      <child link="c_right_back_front_"/>
+    </joint>
+
+    <joint name="c_right_front_back" type="fixed">
+      <origin xyz="0.5 -0.57 -0.7" rpy="-0.5236 -0.34907 0"/>
+      <parent link="base_link"/>
+      <child link="c_right_front_back"/>
+    </joint>
+
+    <joint name="c_right_front_front_" type="fixed">
+      <origin xyz="1.25 -0.57 -0.7" rpy="-0.2618 -1.0472 0"/>
+      <parent link="base_link"/>
+      <child link="c_right_front_front_"/>
+    </joint>
+
+    <joint name="wall_back_" type="fixed">
+      <origin xyz="-1.4 0 1.0" rpy="0 1.5708 0"/>
+      <parent link="base_link"/>
+      <child link="wall_back_"/>
+    </joint>
+
+    <joint name="wall_left_" type="fixed">
+      <origin xyz="-0.65 0.625 1.0" rpy="1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="wall_left_"/>
+    </joint>
+
+    <joint name="wall_ramp_" type="fixed">
+      <origin xyz="-0.65 0 0.32" rpy="0 -0.08727 0"/>
+      <parent link="base_link"/>
+      <child link="wall_ramp_"/>
+    </joint>
+
+    <joint name="wall_right_" type="fixed">
+      <origin xyz="-0.65 -0.625 1.0" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="wall_right_"/>
+    </joint>
+
+    <joint name="wall_top_" type="fixed">
+      <origin xyz="0.1 0 1.0" rpy="0 1.5708 0"/>
+      <parent link="base_link"/>
+      <child link="wall_top_"/>
+    </joint>
+
+    <joint name="wheel_left_back_back__" type="continuous">
+      <origin xyz="-1.62 0.84 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="wheel_left_back_back_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_left_back_back__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_left_back_back__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_left_back_back__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_left_back_back_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <joint name="wheel_left_back_front__" type="continuous">
+      <origin xyz="-0.58 0.84 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="wheel_left_back_front_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_left_back_front__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_left_back_front__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_left_back_front__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_left_back_front_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <joint name="wheel_left_front_back__" type="continuous">
+      <origin xyz="0.58 0.84 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="wheel_left_front_back_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_left_front_back__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_left_front_back__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_left_front_back__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_left_front_back_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <joint name="wheel_left_front_front__" type="continuous">
+      <origin xyz="1.62 0.84 -0.9" rpy="-1.5708 0 0"/>
+      <parent link="base_link"/>
+      <child link="wheel_left_front_front_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_left_front_front__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_left_front_front__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_left_front_front__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_left_front_front_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <joint name="wheel_right_back_back__" type="continuous">
+      <origin xyz="-1.62 -0.84 -0.9" rpy="-1.5708 0 3.14159"/>
+      <parent link="base_link"/>
+      <child link="wheel_right_back_back_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_right_back_back__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_right_back_back__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_right_back_back__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_right_back_back_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <joint name="wheel_right_back_front__" type="continuous">
+      <origin xyz="-0.58 -0.84 -0.9" rpy="-1.5708 0 3.14159"/>
+      <parent link="base_link"/>
+      <child link="wheel_right_back_front_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_right_back_front__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_right_back_front__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_right_back_front__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_right_back_front_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <joint name="wheel_right_front_back__" type="continuous">
+      <origin xyz="0.58 -0.84 -0.9" rpy="-1.5708 0 3.14159"/>
+      <parent link="base_link"/>
+      <child link="wheel_right_front_back_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_right_front_back__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_right_front_back__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_right_front_back__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_right_front_back_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <joint name="wheel_right_front_front__" type="continuous">
+      <origin xyz="1.62 -0.84 -0.9" rpy="-1.5708 0 3.14159"/>
+      <parent link="base_link"/>
+      <child link="wheel_right_front_front_"/>
+      <axis xyz="0 0 1.0"/>
+      <limit effort="0" velocity="0"/>
+    </joint>
+
+    <transmission name="wheel_right_front_front__trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="wheel_right_front_front__" >
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="wheel_right_front_front__motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <gazebo reference="wheel_right_front_front_">
+        <mu1>5</mu1>
+        <mu2>5</mu2>
+        <!--kp>2.75e6</kp>
+        <kd>8.25e1</kd>
+        <fdir1>0 0 0</fdir1>
+        <maxContacts>4</maxContacts-->
+    </gazebo>
+
+    <xacro:include filename="$(find practica3)/urdf/sensor_imu.urdf.xacro" />
+    <xacro:arg name="robot_ns" default="" />
+    <xacro:arg name="prefix" default="" />
+
+    <xacro:sensor_camera node_name="front_camera" node_namespace="$(arg robot_ns)" frame_prefix="$(arg prefix)front_camera_" parent="$(arg prefix)base_link" >
+    <origin xyz="1.4 0.0 0.5" rpy="0 0 0"/>
+    </xacro:sensor_camera>
+    <xacro:sensor_imu ns="$(arg robot_ns)" prefix="$(arg prefix)imu_" parent="$(arg prefix)base_link">
+    <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+    </xacro:sensor_imu>
+
+
+
+    <material name="Material">
+      <color rgba="0.64 0.35768 0.20581 1.0"/>
+    </material>
+
+    <material name="Material.001">
+      <color rgba="0.24647 0.16006 0.04816 1.0"/>
+    </material>
+
+    <material name="phobos_controller">
+      <color rgba="0.3626 0.2548 0.56 0.30000000000000004"/>
+    </material>
+
+    <material name="phobos_indicator5">
+      <color rgba="1.0 1.0 0 1.0"/>
+    </material>
+
+    <!-- Gazebo ros control plugins -->
+    <xacro:arg name="config_controllers" default="$(find practica3)/config/config.yaml"/>
+    <xacro:arg name="update_rate" default="100"/>
+    <xacro:include filename="$(find practica3)/urdf/gazebo_params.urdf"/>
+    <xacro:ros2_control/>
+  
+  </robot>
